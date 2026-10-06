@@ -2,30 +2,90 @@ const questions = [
   {
     question: "¿Qué se entiende por potencial humano?",
     options: [
-      "La cantidad de recursos naturales de un país.",
+      "Los recursos naturales de un país.",
       "Las capacidades, conocimientos, habilidades y talentos de las personas.",
-      "La cantidad de empresas que existen en un país.",
-      "El territorio y clima de una nación."
+      "La cantidad de empresas de un país.",
+      "El territorio nacional."
     ],
     correct: 1
   },
   {
-    question: "¿Cuál de las siguientes características influye directamente en el potencial humano del Perú?",
+    question: "¿Cuál de los siguientes factores contribuye al desarrollo del potencial humano?",
     options: [
-      "La educación y el acceso a oportunidades.",
-      "La cantidad de minerales del país.",
-      "La extensión territorial del Perú.",
-      "La cantidad de carreteras."
+      "La educación de calidad.",
+      "La falta de empleo.",
+      "La desigualdad social.",
+      "La falta de servicios básicos."
     ],
     correct: 0
   },
   {
-    question: "¿Cuál es uno de los principales problemas que afecta el desarrollo del potencial humano en el Perú?",
+    question: "¿Qué estudian las características sociodemográficas de una población?",
     options: [
-      "La falta de acceso a una educación de calidad.",
-      "El exceso de oportunidades laborales.",
-      "El crecimiento de las áreas verdes.",
-      "La diversidad cultural."
+      "Solamente sus recursos naturales.",
+      "Aspectos como edad, sexo, población, distribución y condiciones de vida.",
+      "Únicamente la economía de un país.",
+      "Solamente sus actividades agrícolas."
+    ],
+    correct: 1
+  },
+  {
+    question: "¿Cuál es la relación entre el potencial humano y el desarrollo del Perú?",
+    options: [
+      "El desarrollo depende únicamente de los recursos naturales.",
+      "El potencial humano permite aprovechar conocimientos y capacidades para impulsar el desarrollo del país.",
+      "No existe ninguna relación.",
+      "El potencial humano solo sirve para el ámbito educativo."
+    ],
+    correct: 1
+  },
+  {
+    question: "¿Por qué es importante la educación para el potencial humano?",
+    options: [
+      "Porque permite desarrollar conocimientos y habilidades.",
+      "Porque elimina la diversidad cultural.",
+      "Porque reduce la población.",
+      "Porque reemplaza el trabajo."
+    ],
+    correct: 0
+  },
+  {
+    question: "¿Cuál es una característica sociodemográfica del Perú?",
+    options: [
+      "La distribución de la población en las diferentes regiones.",
+      "La cantidad de minerales existentes.",
+      "La cantidad de montañas.",
+      "La extensión de los océanos."
+    ],
+    correct: 0
+  },
+  {
+    question: "¿Qué problema puede limitar el desarrollo del potencial humano en las zonas rurales del Perú?",
+    options: [
+      "El acceso limitado a educación y servicios básicos.",
+      "La existencia de diferentes culturas.",
+      "La diversidad de paisajes.",
+      "La variedad de alimentos."
+    ],
+    correct: 0
+  },
+  {
+    question: "¿Cómo influye la población joven en el potencial humano del Perú?",
+    options: [
+      "Representa una oportunidad para el desarrollo si recibe educación y empleo adecuado.",
+      "Impide el crecimiento económico.",
+      "Reduce las oportunidades de desarrollo.",
+      "No tiene ninguna relación con el desarrollo."
+    ],
+    correct: 0
+  },
+  {
+    question: "¿Cuál sería una forma de fortalecer el potencial humano del Perú?",
+    options: [
+      "Mejorar la educación, la salud y las oportunidades laborales.",
+      "Reducir el acceso a la educación.",
+      "Disminuir las oportunidades de empleo.",
+      "Limitar el acceso a los servicios básicos."
     ],
     correct: 0
   },
@@ -213,14 +273,16 @@ function showFinalResult() {
   showScreen(resultScreen);
   finalScore.textContent = `${score} / ${questions.length}`;
 
-  if (score === 4) {
-    resultMessage.textContent = "Excelente. Dominas muy bien el tema de potencial humano.";
-  } else if (score >= 3) {
-    resultMessage.textContent = "Muy bien. Tienes un buen nivel, pero puedes reforzar algunos conceptos.";
-  } else if (score >= 2) {
-    resultMessage.textContent = "Buen intento. Revisa nuevamente el contenido y vuelve a intentarlo.";
+  if (score === 10) {
+    resultMessage.textContent = "¡Perfecto! Excelente. Dominas completamente el tema de potencial humano y características sociodemográficas del Perú.";
+  } else if (score >= 8) {
+    resultMessage.textContent = "¡Muy bien! Tienes un dominio excelente del tema. Solo refuerza algunos conceptos.";
+  } else if (score >= 6) {
+    resultMessage.textContent = "Buen trabajo. Has demostrado buen conocimiento, pero aún puedes mejorar ciertos aspectos.";
+  } else if (score >= 4) {
+    resultMessage.textContent = "Buen intento. Revisa nuevamente el contenido y vuelve a intentarlo para mejorar.";
   } else {
-    resultMessage.textContent = "Puedes mejorar. Te recomiendo estudiar nuevamente y volver a responder.";
+    resultMessage.textContent = "Puedes mejorar. Te recomiendo estudiar nuevamente el tema y volver a responder.";
   }
 }
 
